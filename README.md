@@ -9,7 +9,7 @@ A simple Quiz App ..
 Text
 
 <div>
-  <img src="assets/screens/screen_bb.png" alt="Image 1" width="400" />
-  <img src="assets/screens/screen_bb.png" alt="Image 2" width="400" />
+  <img src="Image_1" alt="Image 1" width="400" />
+  <img src="Image_2" alt="Image 2" width="400" />
 </div>
 # quiz_app
