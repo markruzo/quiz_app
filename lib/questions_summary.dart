@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class QuestionsSummary extends StatelessWidget {
-  const QuestionsSummary(this.summaryData, {super.key});
-
   final List<Map<String, Object>> summaryData;
+
+  const QuestionsSummary(this.summaryData, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,24 +11,22 @@ class QuestionsSummary extends StatelessWidget {
       height: 500,
       child: SingleChildScrollView(
         child: Column(
-          children: summaryData.map(
-            (data) {
-              return Row(
+          children: summaryData.map((data) {
+            final question = data['question'] as String? ?? '';
+            final correctAnswer = data['correct_answer'] as String? ?? '';
+            final userAnswer = data['user_answers'] as String? ?? '';
+
+            return ListTile(
+              title: Text('Question: $question'),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(((data['question_index'] as int) + 1).toString()),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Text(data['question'] as String),
-                        Text(data['user_answer'] as String),
-                        Text(data['correct_answer'] as String),
-                      ],
-                    ),
-                  ),
+                  Text('Your Answer: $userAnswer'),
+                  Text('Correct Answer: $correctAnswer'),
                 ],
-              );
-            },
-          ).toList(),
+              ),
+            );
+          }).toList(),
         ),
       ),
     );
