@@ -1,14 +1,8 @@
 # Quiz App
 
-Work In Progress
+A Simple Quiz App
 
-## Content
-
-Text
-
-- [Links](link)
-
-Text
+## Screens
 
 <div>
   <img src="assets/screens/start_screen.png" alt="Start Screen" width="400" />
